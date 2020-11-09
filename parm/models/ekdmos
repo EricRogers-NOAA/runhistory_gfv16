@@ -1,0 +1,13 @@
+whichpdys   PDYm2
+dir         $(compath.py ekd/prod/ekd).%thepdy%
+storetypes  perm
+modelcycs   00,06,12,18
+runjobs     jrunhistory%modelcyc%
+files       %dir%/bmos_stnekdcdffcsts_sq.t%modelcyc%z
+morefiles   %dir%/bmos_stnekdsngvfcsts_sq.t%modelcyc%z
+morefiles   %dir%/naefs_cogekdgb2.t%modelcyc%z
+morefiles   %dir%/naefs_akgekdgb2.t%modelcyc%z
+morefiles   %dir%/naefs_higekdgb2.t%modelcyc%z
+morefiles   %dir%/naefs_prgekdgb2.t%modelcyc%z
+tarmod      %modelcyc%
+dotransfer

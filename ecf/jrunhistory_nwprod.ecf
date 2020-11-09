@@ -1,0 +1,58 @@
+#BSUB -J %E%runhistory_nwprod
+#BSUB -o %COM%/output/%ENVIR%/today/runhistory_nwprod.o%J
+#BSUB -e %COM%/output/%ENVIR%/today/runhistory_nwprod.o%J
+#BSUB -L /bin/sh
+#BSUB -q prod_transfer
+#BSUB -cwd /tmp
+#BSUB -W 14:00
+#BSUB -R rusage[mem=1000]
+#BSUB -R affinity[core]
+#BSUB -P %PROJ%
+
+%include <head.h>
+%include <envir-p3.h>
+
+export cyc=%CYC%
+export rhistlist="%RHISTLIST:all%"
+export excludelist="%EXCLUDELIST:%"
+
+export RSYNC_MAXTIME=%RSYNC_MAXTIME:30%
+export LOG_DAYS_KEEP=%LOG_DAYS_KEEP:5%
+export WRITE_LOG_DIR=%WRITE_LOG_DIR:YES%
+export RSYNC_LOG_DIR=%RSYNC_LOG_DIR:YES%
+export READ_LOG_DIR=%READ_LOG_DIR:YES%
+export CHECK_HPSS_IDX=%CHECK_HPSS_IDX:YES%
+export DRY_RUN_ONLY=%DRY_RUN_ONLY:NO%
+
+model=runhistory
+%include <model_ver.h>
+
+module load HPSS/$HPSS_ver
+
+${HOMErunhistory}/jobs/JRHIST
+
+if [ $? -ne 0 ]; then
+  ecflow_client --abort
+  exit
+fi
+
+%include <tail.h>
+%manual
+################################################################################
+TASKSCRIPT DOCUMENTATION BLOCK
+
+TASKSCRIPT:     jrunhistory_nwprod
+LAST MODIFIER:  Alexander Richert (Alexander.Richert@noaa.gov)
+DATE:           Feb 2020
+
+FULL NAME:    /hpss_archive/runhistory/jrunhistory_nwprod
+TRIGGERED BY: time trigger
+TRIGGERS:     time 23:44
+
+PURPOSE:  To execute the job that archives the /nwprod directory
+
+JOB SCRIPT CALLED: .../nwprod/runhistory.v?.?.?/jobs/JRHIST ==>
+                   .../nwprod/runhistory.v?.?.?/scripts/exrhist.sh.ecf
+
+################################################################################
+%end

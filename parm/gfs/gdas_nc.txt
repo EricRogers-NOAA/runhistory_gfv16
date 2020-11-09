@@ -1,0 +1,15 @@
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.atmanl.nc              
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.atmanl.ensres.nc       
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfcanl.nc              
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.logf000.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.atmf000.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfcf000.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.logf003.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.atmf003.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfcf003.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.logf006.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.atmf006.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfcf006.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.logf009.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.atmf009.nc          
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfcf009.nc          

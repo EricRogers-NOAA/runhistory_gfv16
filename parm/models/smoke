@@ -1,0 +1,6 @@
+runjobs             jrunhistory_daily
+whichpdys           PDYm2
+storetypes          perm
+dir                 $(compath.py hysplit/prod/smokecs).%thepdy%
+files               ./*{MESSAGE,PARDUMP,FIRES,grib*227,hms*txt}*
+dotransfer

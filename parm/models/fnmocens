@@ -1,0 +1,30 @@
+runjobs         jrunhistory%modelcyc%
+dir             $(compath.py naefs/prod/fens).%thepdy%/%modelcyc%
+whichpdys       PDYm2
+
+modelcycs       00,12
+files           ./pgrb2a/*
+storetypes      perm
+tarmod          .pgrb2a
+dotransfer      optional
+
+files           ./pgrb2a_an/*
+storetypes      1yr
+tarmod          .pgrb2a_an
+dotransfer      optional
+
+files           ./pgrb2a_bc/*
+storetypes      2yr
+tarmod          .pgrb2a_bc
+dotransfer      optional
+
+files           ./pgrb2a_wt/*
+storetypes      1yr
+tarmod          .pgrb2a_wt
+dotransfer      optional
+
+modelcycs       06,18
+files           ./pgrb2a/*
+storetypes      perm
+tarmod          .pgrb2a
+dotransfer      optional

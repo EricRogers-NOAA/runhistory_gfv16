@@ -1,0 +1,132 @@
+runjobs         jrunhistory_nwm
+whichpdys       PDYm2
+storetypes      1yr
+dir             $(compath.py nwm/prod/nwm).%thepdy%
+
+files           ./forcing_analysis_assim/*
+tarmod          .forcing_analysis_assim
+dotransfer
+
+files           ./forcing_analysis_assim_hawaii/*
+tarmod          .forcing_analysis_assim_hawaii
+dotransfer
+
+files           ./forcing_short_range/*
+tarmod          .forcing_short_range
+dotransfer
+
+files           ./forcing_short_range_hawaii/*
+tarmod          .forcing_short_range_hawaii
+dotransfer
+
+files           ./forcing_medium_range/*
+tarmod          .forcing_medium_range
+dotransfer
+
+files           ./forcing_long_range_mem1/*long_range_thin*
+tarmod          .forcing_long_range_mem1
+dotransfer
+
+files           ./forcing_long_range_mem2/*long_range_thin*
+tarmod          .forcing_long_range_mem2
+dotransfer
+
+files           ./forcing_long_range_mem3/*long_range_thin*
+tarmod          .forcing_long_range_mem3
+dotransfer
+
+files           ./forcing_long_range_mem4/*long_range_thin*
+tarmod          .forcing_long_range_mem4
+dotransfer
+
+files           ./restart/*nwm.rst*
+tarmod          .restart
+dotransfer
+
+files           ./restart_hawaii/*nwm.rst*
+tarmod          .restart_hawaii
+dotransfer
+
+files           ./restart_long/*nwm.rst*
+tarmod          .restart_long
+dotransfer
+
+files           ./usgs_timeslices/*
+tarmod          .usgs_timeslices
+dotransfer
+
+files           ./analysis_assim/*{channel,reservoir,terrain}*
+tarmod          .analysis_assim
+dotransfer
+
+files           ./analysis_assim_hawaii/*{channel,reservoir,terrain}*
+tarmod          .analysis_assim_hawaii
+dotransfer
+
+files           ./analysis_assim_long/*{channel,reservoir,terrain}*
+tarmod          .analysis_assim_long
+dotransfer
+
+files           ./short_range/*{channel,reservoir,terrain}*
+tarmod          .short_range
+dotransfer
+
+files           ./short_range_hawaii/*{channel,reservoir,terrain}*
+tarmod          .short_range_hawaii
+dotransfer
+
+files           ./medium_range_mem1/*{channel,reservoir,terrain}*
+tarmod          .medium_range_mem1
+dotransfer
+
+files           ./medium_range_mem2/*{channel,reservoir,terrain}*
+tarmod          .medium_range_mem2
+dotransfer
+
+files           ./medium_range_mem3/*{channel,reservoir,terrain}*
+tarmod          .medium_range_mem3
+dotransfer
+
+files           ./medium_range_mem4/*{channel,reservoir,terrain}*
+tarmod          .medium_range_mem4
+dotransfer
+
+files           ./medium_range_mem5/*{channel,reservoir,terrain}*
+tarmod          .medium_range_mem5
+dotransfer
+
+files           ./medium_range_mem6/*{channel,reservoir,terrain}*
+tarmod          .medium_range_mem6
+dotransfer
+
+files           ./medium_range_mem7/*{channel,reservoir,terrain}*
+tarmod          .medium_range_mem7
+dotransfer
+
+files           ./long_range_mem1/*{channel,reservoir,terrain}*
+tarmod          .long_range_mem1
+dotransfer
+
+files           ./long_range_mem2/*{channel,reservoir,terrain}*
+tarmod          .long_range_mem2
+dotransfer
+
+files           ./long_range_mem3/*{channel,reservoir,terrain}*
+tarmod          .long_range_mem3
+dotransfer
+
+files           ./long_range_mem4/*{channel,reservoir,terrain}*
+tarmod          .long_range_mem4
+dotransfer
+
+files           ./forcing_analysis_assim_extend/*
+tarmod          .forcing_analysis_assim_extend
+dotransfer      optional
+
+files           ./analysis_assim_extend/*{channel,reservoir,terrain}*
+tarmod          .analysis_assim_extend
+dotransfer      optional
+
+files           ./restart_extend/*nwm.rst*
+tarmod          .restart_extend
+dotransfer      optional

@@ -1,0 +1,8 @@
+whichpdys   PDYm1
+runjobs     jrunhistory_daily
+storetypes  1yr
+
+dir         $(compath.py nhc/prod/wsp).%thepdy%
+files       ./
+skipnodir
+dotransfer  optional

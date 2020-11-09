@@ -1,0 +1,51 @@
+#!/bin/sh
+
+export PS4=' $SECONDS + '
+date
+set -x
+
+export DATA=${DATA:-${DATAROOT:?}/${jobid:?}}
+mkdir $DATA
+cd $DATA
+
+export SENDECF=YES
+export NET=runhistory
+
+if [ ${envir} = "prod" ]
+then
+    export HPSSOUT=${HPSSOUT:-/NCEPPROD/hpssprod/runhistory}
+    export HPSSOUT_OBS=${HPSSOUT_OBS:-/NCEPOBSERV/hpssprod/runhistory}
+else
+    export HPSSOUT=${HPSSOUT:-/NCEPPROD/hpsspara/runhistory}
+    export HPSSOUT_OBS=${HPSSOUT_OBS:-/NCEPOBSERV/hpsspara/runhistory}
+    export maillist=${maillist:-'simon.hsiao@noaa.gov'}
+    export HSI=${HSI:-"echo hsi"};
+fi
+
+# Set TMPDIR, which is needed by htar
+export TMPDIR=$DATA
+
+export CYC=$cyc
+export cycle=t${cyc}z
+export CYCLE=T${cyc}Z
+
+setpdy.sh
+. ./PDY
+
+export outid="LL$job"
+export pgmout="OUTPUT.${pid}"
+
+export USHrunhistory=${USHrunhistory:-$HOMErunhistory/ush}
+export PARMrunhistory=${PARMrunhistory:-$HOMErunhistory/parm}
+export LOGrunhistory=${LOGrunhistory:-$GESROOT/$envir/$NET}
+mkdir $LOGrunhistory
+
+env
+
+#############################################################
+${HOMErunhistory}/scripts/exhpss_cleanup.sh.ecf
+#############################################################
+
+date
+cd $DATAROOT
+if [ ${KEEPDATA} = NO ] ; then rm -rf $DATA ; fi

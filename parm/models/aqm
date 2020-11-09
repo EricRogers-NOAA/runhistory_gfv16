@@ -1,0 +1,18 @@
+whichpdys           PDYm2
+storetypes          5yr
+modelcycs           00,06,12,18
+runjobs             jrunhistory%modelcyc%
+dir                 $(compath.py aqm/prod/aqm).%thepdy%
+
+files               ./*t%modelcyc%z*{aconc,cgrid,aerodiam,dep,vis,b3gt2}*
+tarmod              %modelcyc%.output
+dotransfer
+
+files               ./*t%modelcyc%z*grib2*
+tarmod              %modelcyc%.post
+dotransfer
+
+files               ./*t%modelcyc%z*{nmm,emission.ncf,emission_r.ncf,met,soil,ngac}*
+excludefiles        ./*grib2*
+tarmod              %modelcyc%.input
+dotransfer

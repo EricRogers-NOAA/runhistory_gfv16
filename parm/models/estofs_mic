@@ -1,0 +1,16 @@
+whichpdys   PDYm2
+modelcycs   00,06,12,18
+runjobs     jrunhistory%modelcyc%
+
+#####
+dir         $(compath.py estofs/prod/estofs_mic).%thepdy%
+# input
+storetypes  perm
+files       ./estofs.mic.t%modelcyc%z.{hotstart,restart,surfaceforcing,fort.22}
+tarmod          %modelcyc%.input
+dotransfer
+# output
+storetypes  2yr
+files       ./estofs.mic.t%modelcyc%z.*{cwl.grib2,swl.grib2,htp.grib2,nc}
+tarmod          %modelcyc%.output
+dotransfer

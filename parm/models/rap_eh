@@ -1,0 +1,6 @@
+whichpdys       PDYm1
+runjobs         jrunhistory_daily
+storetypes      2yr
+dir             $(compath.py rap/prod/rap_eh).%thepdy%
+files           ./
+dotransfer

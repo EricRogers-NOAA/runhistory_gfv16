@@ -1,0 +1,19 @@
+modelcycs       00,06,12,18
+whichpdys       PDYm2
+runjobs         jrunhistory%modelcyc%
+dir             $(compath.py wave/prod/multi_1).%thepdy%
+
+storetypes      5yr
+files           ./multi_1*.t%modelcyc%z.{wind,ice,log,outgrd,outpnt}
+tarmod          %modelcyc%.raw
+dotransfer
+
+storetypes      perm
+files           ./multi_1*.t%modelcyc%z.restart
+tarmod          %modelcyc%.keep
+dotransfer
+
+storetypes      5yr
+files           ./{multi_1.t%modelcyc%z*tar.gz,multi_1.t%modelcyc%z*tar,*sst,multi_1*.t%modelcyc%z.f*grib2,wavebg_rtma.t%modelcyc%z*grib2}
+tarmod          %modelcyc%.output
+dotransfer

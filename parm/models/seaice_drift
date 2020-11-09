@@ -1,0 +1,7 @@
+whichpdys       PDYm1
+runjobs         jrunhistory_daily
+dir             $(compath.py omb/prod/seaice_drift).%thepdy%
+storetypes      2yr
+files           %dir%/global*
+morefiles       %dir%/*.kml
+dotransfer

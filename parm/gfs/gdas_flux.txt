@@ -1,0 +1,8 @@
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfluxgrbf000.grib2      
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfluxgrbf000.grib2.idx  
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfluxgrbf003.grib2      
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfluxgrbf003.grib2.idx  
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfluxgrbf006.grib2      
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfluxgrbf006.grib2.idx  
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfluxgrbf009.grib2      
+./gdas.%thepdy%/%modelcyc%/atmos/gdas.t%modelcyc%z.sfluxgrbf009.grib2.idx  

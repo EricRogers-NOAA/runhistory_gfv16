@@ -1,0 +1,2 @@
+shell         cp -vn /gpfs/dell1/nco/ops/dcom/prod/quips /gpfs/dell1/nco/ops/dcom/${envir}/$PDYm1/.
+shell         cp -vn /gpfs/dell1/nco/ops/dcom/prod/sdmedit /gpfs/dell1/nco/ops/dcom/${envir}/$PDYm1/.

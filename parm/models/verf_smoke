@@ -1,0 +1,6 @@
+whichpdys           PDYm3
+runjobs             jrunhistory_daily
+storetypes          perm
+dir                 $(compath.py verf/prod/smoke).%thepdy%
+files               ./
+dotransfer

@@ -1,0 +1,7 @@
+whichpdys       PDYm2
+runjobs         jrunhistory_daily
+dir             /gpfs/dell1/nco/ops/dcom/prod/%thepdy%
+storetypes      perm
+logarg2		%whichpdy%
+ignore72
+dotransfer

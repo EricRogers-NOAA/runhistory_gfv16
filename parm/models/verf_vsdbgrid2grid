@@ -1,0 +1,7 @@
+whichpdys       PDYm3
+runjobs         jrunhistory_daily
+dir             $(compath.py verf/prod/vsdb)/grid2grid
+storetypes      perm
+files           {cloud,dust,etop,reflt,smoke,urma}/*_%thepdy%.vsdb
+tarmod          .%thepdy%
+dotransfer

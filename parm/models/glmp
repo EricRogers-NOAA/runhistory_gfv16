@@ -1,0 +1,28 @@
+runjobs         jrunhistory_daily
+whichpdys       PDYm1
+dir             $(compath.py glmp/prod/glmp).%thepdy%
+storetypes      2yr
+
+files           ./glmp_{cig,tdp,vis,visp,wsg,sky}.co.ra.g.t[0-2][0-9]30z
+morefiles       ./glmp_{cigp,visp}.co.sq.g.t[0-2][0-9]30z
+morefiles       ./glmp_{cig,vis}_meldpreds.sq.t[0-2][0-9]30z
+morefiles       ./glmp_compobs_{adjwinds,sky}.[0-2][0-9]{_m1run_,}30
+morefiles       ./glmp_compobs_cig.[0-2][0-9]30
+morefiles       ./glmp_cvs_obs1pkd.[0-2][0-9]_m1run_30
+morefiles       ./glmp_cvs_obs1pkd.[0-2]{[0-9],}30
+morefiles       ./glmp_fcsts_cig{{p[2-3],p5},}.co.gb2.g.t[0-2][0-9]30z
+morefiles       ./glmp_fcsts_vis{{p2,p[4-5]},}.co.gb2.g.t[0-2][0-9]30z
+morefiles       ./glmp_fcsts_{sky,t,td,wdir,wgst,wspd}.co.gb2.g.t[0-2][0-9]30z
+morefiles       ./glmp_gfs{mergesta,pkd47_Td}.t[0-2][0-9]z*
+morefiles       ./glmp_granalysis_{tdp,wsg}_tossobs.t[0-2][0-9]30z*
+morefiles       ./glmp_grid_{cig,vis}_meldfcsts.sq.t[0-2][0-9]30z*
+morefiles       ./glmp_hr00_{cig,vis,wdir,wgst,wspd}.co.gb2.g.t[0-2][0-9]30z*
+morefiles       ./glmp_hr00_{cig,tdp,vis,wsg,sky}.co.ra.g.t[0-2][0-9]30z*
+morefiles       ./glmp_hr00_{sky,t,td,tee,tdee}.co.gb2.g.t[0-2][0-9]30z*
+morefiles       ./glmp_hrrr3mos_fcsts.sq.t[0-2][0-9]z*
+morefiles       ./glmp_obs[1-3]_sfctbl.[0-2][0-9]{_m1run_,}30*
+morefiles       ./glmp_sc{e,w}_mdlp.[0-2][0-9]{_m1run_,}30*
+morefiles       ./glmp_tdwg_obs3pkd.[0-2][0-9]{_m1run_,}30* 
+morefiles       ./glmp.t[0-2][0-9]30z.master.f0[0-3][0-9].grib2*
+
+dotransfer

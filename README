@@ -1,0 +1,7 @@
+To add a model to the 00/06/12/18z or daily runhistory jobs, add a file in
+parm/models/, and add the name of that parm file (no path, just the base
+filename) to the appropriate jrunhistory* file list(s) in parm/. To figure out
+how to format the parm file in parm/models/, check out the ones that are there
+and/or look at the documentation at the top of ush/rhist.sh, which is the
+script responsible for parsing these files and conducting the transfers to
+HPSS.

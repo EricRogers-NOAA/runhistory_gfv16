@@ -1,0 +1,8 @@
+whichpdys           PDYm10
+storetypes          perm
+runjobs             jrunhistory_daily
+dir                 $(compath.py verf/prod/precip).%thepdy%
+files               ./*
+excludefiles        ./sr*
+tarmod              .precip
+dotransfer

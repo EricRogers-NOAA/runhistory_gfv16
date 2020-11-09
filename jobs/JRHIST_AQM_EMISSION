@@ -1,0 +1,56 @@
+#!/bin/ksh
+
+set -xa
+export PS4='$SECONDS + '
+date -u
+
+export DATA=${DATA:-${DATAROOT}/${jobid}}
+mkdir -p $DATA
+cd $DATA # setting working directory
+
+export NET=runhistory
+export cyc=12
+export cycle=t12z
+
+if [ "$envir" = prod ]; then
+  export HPSSOUT=${HPSSOUT:-/NCEPPROD/hpssprod/runhistory}
+  export HPSSOUT_OBS=${HPSSOUT_OBS:-/NCEPOBSERV/hpssprod/runhistory}
+else
+  export HPSSOUT=${HPSSOUT:-/NCEPPROD/hpsspara/runhistory}
+  export HPSSOUT_OBS=${HPSSOUT_OBS:-/NCEPOBSERV/hpsspara/runhistory}
+fi
+
+# Set TMPDIR, which is needed by htar
+export TMPDIR=$DATA
+
+export pgmout="OUTPUT.${pid}"
+
+export USHrunhistory=${USHrunhistory:-$HOMErunhistory/ush}
+export PARMrunhistory=${PARMrunhistory:-$HOMErunhistory/parm}
+
+# export RUN_DAY=${RUN_DAY:-16}
+export RUN_DAY=${RUN_DAY:-17}
+
+export COMINaqm=${COMINaqm:-$(compath.py aqm/${envir})}
+#export INPEMIDIR=${INPEMIDIR:-${COMROOT}/${NET}/${envir}/emission}
+#export INPEMIDIRhps=${INPEMIDIRhps:-/gpfs/hps/nco/ops/com/aqm/${envir}/emission}
+export INPEMIDIRhps=${INPEMIDIRhps:-${COMINaqm}/emission}
+
+env
+
+# get the current day
+current_day=`date +%d`
+echo " the current day= $current_day"
+
+#############################################################
+# execute the script
+#if (( ${current_day} == ${RUN_DAY} ))
+#then
+    ${HOMErunhistory}/scripts/exrhist_aqm_emission.sh.ecf 
+#fi
+#############################################################
+if [ "$KEEPDATA" != "YES" ] ; then
+  rm -rf $DATA
+fi
+
+date

@@ -1,0 +1,7 @@
+whichpdys       PDYm2
+dir             /gpfs/dell1/nco/ops/com/hourly/prod/radar.%thepdy%
+runjobs         jrunhistory_daily
+storetypes      perm
+files           ./*{refc_obs,grb2}*
+tarmod          .save
+dotransfer

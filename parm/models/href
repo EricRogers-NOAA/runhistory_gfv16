@@ -1,0 +1,6 @@
+whichpdys       PDYm1
+runjobs         jrunhistory_daily
+dir             $(compath.py hiresw/prod/href).%thepdy%/ensprod
+storetypes      2yr
+files           ./href.t??z.{conus,ak,pr,hi}.{mean,avrg,prob,pmmn}.f[0-3][0-9].grib2
+dotransfer

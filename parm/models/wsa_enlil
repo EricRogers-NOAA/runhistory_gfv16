@@ -1,0 +1,5 @@
+whichpdys           PDYm1
+runjobs             jrunhistory_daily
+storetypes          2yr
+dir                 $(compath.py wsa_enlil/prod/wsa_enlil).%thepdy%
+dotransfer

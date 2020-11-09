@@ -1,0 +1,34 @@
+whichpdys           PDYm1
+dir                 $(compath.py lmp/prod/lmp).%thepdy%
+runjobs             jrunhistory_daily
+storetypes          2yr
+files               ./lmp_1h{cnv,ltg}_{nam,gfs}mos.t[0-2][0-9]z.vecsq 
+morefiles           ./lmp_pop01_{ecm,hrrr,nam}mos.2[0-1][0-9][0-9][0-1][0-9][0-3][0-9]*
+morefiles           ./lmp_1hcnvltggrib2_2p5km.t[0-2][0-9]30z 
+morefiles           ./lmp_1hltg_flashes.t[0-2][0-9]z 
+morefiles           ./lmp_1hltg_grids.t[0-2][0-9]z.grd 
+morefiles           ./lmp_bufrmsg.xtrn.t[0-2][0-9]30z 
+morefiles           ./lmp_compobs.t[0-2][0-9]30z
+morefiles           ./lmp_gfsmospkd.t[0-2][0-9]z
+morefiles           ./lmp_gfspreds.t[0-2][0-9]30z
+morefiles           ./lmp_grdmodl{stnpreds,}.t[0-2][0-9]30z
+morefiles           ./lmp_hrrr_{hrly,subh}_{3,5}km.t[0-2][0-9]z.grdsq
+morefiles           ./lmp_hrrr3mos_fcsts.sq.t[0-2][0-9]z
+morefiles           ./lmp_lavtxt{_ext,_full,}.t[0-2][0-9][0-4][0,5]z
+morefiles           ./lmp_ltggrd.[0-2][0-9]30
+morefiles           ./lmp_mrms_1hpcp-{ac,nn}_2[0-1][0-9][0-9][0-1][0-9][0-3][0-9]_[0-2][0-9][0-5][0-9].grd
+morefiles           ./lmp_mrms_mx{cref,stp30,vil}_2[0-1][0-9][0-9][0-1][0-9][0-3][0-9]_[0-2][0-9][0-5][0-9].grd
+morefiles           ./lmp_mrms2rcm_pkd.[0-2][0-9]30
+morefiles           ./lmp_mrmsqc_2[0-1][0-9][0-9][0-1][0-9][0-3][0-9]_[0-2][0-9][0-5][0-9].grd
+morefiles           ./lmp_obspkd.[0-2][0-9]30
+morefiles           ./lmp_{pcpyn,pop}{01,06,12}_grib2_meld2p5.t[0-2][0-9]30z
+morefiles           ./lmp_oldgfsmospkd.t[0-2][0-9]z
+morefiles           ./lmp_radgrd.qc.[0-2][0-9]30
+morefiles           ./lmp_rap_hrly_2p5km.t[0-2][0-9]z.grdsq
+morefiles           ./lmp_rawmetar_early.[0-2][0-9]30
+morefiles           ./lmp_sc{e,w}_mdlp.[0-2][0-9]30
+morefiles           ./lmp_sfctbl_early.[0-2][0-9][0-4][0,5]
+morefiles           ./lmp_stn_lavfcsts.t[0-2][0-9][0-4][0,5]z
+morefiles           ./lmp_stnmosfcsts.t[0-2][0-9]30z
+morefiles           ./lmp_tcus_{east,west}.[0-2][0-9]30
+dotransfer

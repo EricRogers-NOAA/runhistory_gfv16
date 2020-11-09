@@ -1,0 +1,6 @@
+whichpdys           PDYm9
+runjobs             jrunhistory_daily
+storetypes          perm
+dir                 $(compath.py urma/prod/pcpurma).%thepdy%
+storetypes          perm
+dotransfer

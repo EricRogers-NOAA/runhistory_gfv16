@@ -1,0 +1,15 @@
+runjobs       jrunhistory_daily
+storetypes    perm
+
+whichpdys     PDY
+dir           /gpfs/dell1/nco/ops/dcom/prod/decoder_logs
+files         ./*.log.1
+ignore72
+dotransfer
+
+whichpdys     PDYm1
+dir           /gpfs/dell1/nco/ops/dcom/prod/ldmdata/obs
+files         ./ -name '*%thepdy%*'
+excludefiles  ./upperair/nexrad_level2
+ignore72
+dotransfer

@@ -1,0 +1,8 @@
+whichpdys           PDYm10
+dir                 $(compath.py verf/prod/vsdb)/precip
+runjobs             jrunhistory_daily
+storetypes          perm
+files               */*_${yrmoday}.vsdb
+excludefiles        */*sr*
+tarmod              .%thepdy%
+dotransfer

@@ -1,0 +1,17 @@
+whichpdys       PDYm2
+runjobs         jrunhistory_daily
+dir             $(compath.py nos/prod/glofs).%thepdy%
+
+storetypes      2yr
+files           *glofs.l?ofs.stations.nowcast*
+morefiles       *glofs.l?ofs.stations.forecast*
+morefiles       *glofs.l?ofs.fields.nowcast*
+morefiles       *glofs.l?ofs.fields.forecast*
+morefiles       *glofs.l?ofs.rst.nowcast*
+morefiles       *glofs.l?ofs.corms*
+dotransfer
+
+storetypes      perm
+files           *sfcmarobs.txt*
+morefiles       *glofs*bufr_d*
+dotransfer

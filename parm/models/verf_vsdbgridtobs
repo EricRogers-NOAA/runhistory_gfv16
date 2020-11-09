@@ -1,0 +1,7 @@
+whichpdys       PDYm3
+runjobs         jrunhistory_daily
+dir             $(compath.py verf/prod/vsdb)/gridtobs
+storetypes      perm
+files           {aknest,aqm,dgex,gdas,gfse,hawaiinest,hirtma,ndas,priconest,rap,rtma2p5,smartinit2p5,srefens,srefx,akrtma,conusnest,fwis,gfs,hiresw,nam,narre,ngac,nssl4arw,prrtma,smartinit,sref,srefensx,urma2p5}/*_%thepdy%.vsdb
+tarmod          .%thepdy%
+dotransfer
