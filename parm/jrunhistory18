@@ -1,5 +1,6 @@
 hrrr_conus
 hrrr_alaska
+hrrr_hrrrdas
 rap_p
 rap
 srefges
@@ -19,9 +20,7 @@ cmcens
 fnmocens
 ekdmos
 gefs
-estofs_atl
-estofs_mic
-estofs_pac
+estofs
 gdas
 gfs
 etss
