@@ -1,7 +1,7 @@
 modelcycs       00,06,12,18
 runjobs         jrunhistory%modelcyc%
-logarg1         /gpfs/dell3/ptmp/Eric.Rogers
-dir             /gpfs/dell1/nco/ops/com/gfs/para
+logarg1         %dir%/gdas.%thepdy%/%modelcyc%
+dir             $(compath.py gfs/prod)
 whichpdys       PDYm2
 storetypes      perm
 #

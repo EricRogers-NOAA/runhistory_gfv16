@@ -6,7 +6,7 @@ runjobs         jrunhistory00
 logarg2          %thepdy%00
 #
 storetypes      perm
-files           ./*{t00z,t01z,t02z,t03z,t04z,t05z}*{wrfnatf00,wrfnatf01,wrfnatf02,wrfnatf03.ak,wrfnatf04.ak,wrfnatf05.ak,wrfnatf06.ak}*
+files           ./*{t00z,t01z,t02z,t03z,t04z,t05z}*{wrfnatf00,wrfnatf01,wrfnatf02,wrfnatf03,wrfnatf04,wrfnatf05,wrfnatf06}*
 tarmod          00-05.wrfnatdng
 dotransfer
 #
@@ -27,7 +27,7 @@ runjobs         jrunhistory06
 logarg2          %thepdy%06
 #
 storetypes      perm
-files           ./*{t06z,t07z,t08z,t09z,t10z,t11z}*{wrfnatf00,wrfnatf01,wrfnatf02,wrfnatf03.ak,wrfnatf04.ak,wrfnatf05.ak,wrfnatf06.ak}*
+files           ./*{t06z,t07z,t08z,t09z,t10z,t11z}*{wrfnatf00,wrfnatf01,wrfnatf02,wrfnatf03,wrfnatf04,wrfnatf05,wrfnatf06}*
 tarmod          06-11.wrfnatdng
 dotransfer
 #
@@ -48,7 +48,7 @@ runjobs         jrunhistory12
 logarg2          %thepdy%12
 #
 storetypes      perm
-files           ./*{t12z,t13z,t14z,t15z,t16z,t17z}*{wrfnatf00,wrfnatf01,wrfnatf02,wrfnatf03.ak,wrfnatf04.ak,wrfnatf05.ak,wrfnatf06.ak}*
+files           ./*{t12z,t13z,t14z,t15z,t16z,t17z}*{wrfnatf00,wrfnatf01,wrfnatf02,wrfnatf03,wrfnatf04,wrfnatf05,wrfnatf06}*
 tarmod          12-17.wrfnatdng
 dotransfer
 #
@@ -70,7 +70,7 @@ runjobs         jrunhistory18
 logarg2          %thepdy%18
 #
 storetypes      perm
-files           ./*{t18z,t19z,t20z,t21z,t22z,t23z}*{wrfnatf00,wrfnatf01,wrfnatf02,wrfnatf03.ak,wrfnatf04.ak,wrfnatf05.ak,wrfnatf06.ak}*
+files           ./*{t18z,t19z,t20z,t21z,t22z,t23z}*{wrfnatf00,wrfnatf01,wrfnatf02,wrfnatf03,wrfnatf04,wrfnatf05,wrfnatf06}*
 tarmod          18-23.wrfnatdng
 dotransfer
 #

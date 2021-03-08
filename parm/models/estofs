@@ -1,0 +1,16 @@
+whichpdys   PDYm2
+modelcycs   00,06,12,18
+runjobs     jrunhistory%modelcyc%
+
+#####
+dir         $(compath.py estofs/prod/estofs).%thepdy%
+# input
+storetypes  perm
+files       ./estofs.t%modelcyc%z.{hotstart,restart,surface.forcing,offset.63,fort.22}
+tarmod          %modelcyc%.input
+dotransfer
+# output
+storetypes  2yr
+files       ./estofs.t%modelcyc%z.*{northpacific.htp.grib2,guam.htp.grib2,hawaii.htp.grib2,alaska.htp.grib2,puertori.htp.grib2,conus.west.htp.grib2,conus.east.htp.grib2,northpacific.cwl.grib2,guam.cwl.grib2,guam.swl.grib2,hawaii.cwl.grib2,hawaii.swl.grib2,alaska.cwl.grib2,alaska.swl.grib2,puertori.cwl.grib2,puertori.swl.grib2,conus.west.cwl.grib2,conus.west.swl.grib2,conus.east.cwl.grib2,conus.east.swl.grib2,fields.cwl.nc,points.htp.nc,points.cwl.nc,points.swl.nc}
+tarmod          %modelcyc%.output
+dotransfer

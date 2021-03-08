@@ -3,6 +3,6 @@ runjobs         jrunhistory%modelcyc%
 whichpdys       PDYm2
 storetypes      2yr
 dir             $(compath.py etss/prod/etss).%thepdy%
-files           %dir%/*{t%modelcyc%z,.%modelcyc%}*
+files           %dir%/*{grib2,txt,tar}*
 tarmod          %modelcyc%.output
 dotransfer

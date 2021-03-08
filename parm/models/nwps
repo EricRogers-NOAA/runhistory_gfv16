@@ -5,6 +5,8 @@ files               */*/*/*
 morefiles           */*/Warn_Forecaster*
 excludefiles        */*/*/*plots_CG*
 moreexcludefiles    */*/*/*wave_estofs_waterlevel*
+moreexcludefiles    */*/CG1/*PE*
+moreexcludefiles    */*/CG1/*00-0*
 
 dir                 $(compath.py nwps/prod/ar).%thepdy%
 dotransfer
